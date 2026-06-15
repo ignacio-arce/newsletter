@@ -1,7 +1,7 @@
-title: Bananews
+title: newsletter
 description: A curated digest of tech news worth sharing — short, sharp, and sourced.
 url: https://ignacio-arce.github.io
-baseurl: /bananews
+baseurl: /newsletter
 
 author:
   name: Ignacio Arce
