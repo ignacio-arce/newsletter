@@ -1,0 +1,44 @@
+title: Bananews
+description: A curated digest of tech news worth sharing — short, sharp, and sourced.
+url: https://ignacio-arce.github.io
+baseurl: /bananews
+
+author:
+  name: Ignacio Arce
+
+markdown: kramdown
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+collections:
+  tags:
+    output: true
+    permalink: /tags/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      permalink: /:year/:month/:title/
+  - scope:
+      path: ""
+      type: "tags"
+    values:
+      layout: "tag-page"
+
+permalink: /:year/:month/:title/
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - .gitignore
+  - shell.nix
+  - PLAN.md
+  - AGENTS.md
+  - skills/

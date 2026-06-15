@@ -1,0 +1,19 @@
+---
+layout: page
+---
+
+{% assign tag_name = page.title %}
+{% assign tag_posts = site.posts | where_exp: "post", "post.tags contains tag_name" %}
+
+{% if tag_posts.size > 0 %}
+  <ul class="archive-list" style="list-style: none;">
+    {% for post in tag_posts %}
+      <li class="archive-item">
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%b %d, %Y" }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p class="empty-state">No posts with this tag yet.</p>
+{% endif %}
